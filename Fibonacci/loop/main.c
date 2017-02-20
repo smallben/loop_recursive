@@ -12,22 +12,22 @@ int main()
 	printf ("Enter the length of the Fibonacci Serials?");
 	scanf("%d", &iLength);
 
-	FibArray = (int *)malloc (sizeof (int) * iLength);
+	FibArray = (int *)malloc (sizeof (int) * (iLength + 1));
 
-	printf ("Starting from 1th to %dth\n", iLength);
-	for (i = 1; i <= iLength; i++)
+	printf ("Starting from 0th to %dth\n", iLength);
+	for (i = 0; i <= iLength; i++)
 	{
 		printf ("%dth\t", i);
 	}
 	printf ("\n");
-	for (i = 1; i <= iLength; i++)
+	for (i = 0; i <= iLength; i++)
 	{
-		if (i == 1)
+		if (i == 0)
 		{
-			FibArray[i] = 1;
+			FibArray[i] = 0;
 			printf ("%d\t", FibArray[i]);
 		}
-		else if (i == 2)
+		else if (i == 1)
 		{
 			FibArray[i] = 1;
 			printf ("%d\t", FibArray[i]);
